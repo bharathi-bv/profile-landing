@@ -1,18 +1,600 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Bharathi – Growth & PLG</title>
-</head>
-<body>
-  <h1>Hi, I’m Bharathi</h1>
-  <p>Growth & PLG Lead helping startups turn traffic into revenue.</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bharathi — Coder × Marketer</title>
+    <meta
+      name="description"
+      content="Bharathi (Vivekananda Bharathi Balasubramaniam) — Growth + PLG lead learning development. I build compounding acquisition + activation systems with clean analytics and shipping mindset."
+    />
+    <style>
+      :root {
+        --bg: #0b0f17;
+        --panel: rgba(255, 255, 255, 0.04);
+        --panel2: rgba(255, 255, 255, 0.06);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.68);
+        --subtle: rgba(255, 255, 255, 0.12);
+        --line: rgba(255, 255, 255, 0.10);
+        --accent: #de0d6f;
+        --accent2: #731054;
+        --ok: #25d366;
+        --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        --radius: 18px;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+        --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+          "Apple Color Emoji", "Segoe UI Emoji";
+      }
 
-  <h2>About me</h2>
-  <p>
-    8+ years in growth across SaaS, marketplaces, and AI products.
-    I work across acquisition, activation, and conversion.
-  </p>
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: var(--sans);
+        color: var(--text);
+        background: radial-gradient(1200px 800px at 20% 10%, rgba(222, 13, 111, 0.22), transparent 60%),
+          radial-gradient(1200px 900px at 90% 30%, rgba(115, 16, 84, 0.18), transparent 60%),
+          radial-gradient(900px 700px at 50% 110%, rgba(37, 211, 102, 0.08), transparent 50%),
+          var(--bg);
+        overflow-x: hidden;
+      }
 
-  <a href="mailto:your@email.com">Contact me</a>
-</body>
+      a { color: inherit; text-decoration: none; }
+      a:hover { opacity: 0.92; }
+
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 18px 80px; }
+
+      /* Top nav */
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 14px 14px;
+        border: 1px solid var(--line);
+        background: rgba(11, 15, 23, 0.55);
+        backdrop-filter: blur(10px);
+        border-radius: 999px;
+        position: sticky;
+        top: 14px;
+        z-index: 20;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 8px;
+      }
+
+      .badge {
+        font-family: var(--mono);
+        font-size: 12px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--subtle);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .brand .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 6px rgba(222, 13, 111, 0.15);
+      }
+
+      .navlinks {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      .pill {
+        padding: 10px 12px;
+        border-radius: 999px;
+        border: 1px solid transparent;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1;
+      }
+      .pill:hover { border-color: var(--line); color: var(--text); background: rgba(255,255,255,0.03); }
+
+      .cta {
+        padding: 11px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(222, 13, 111, 0.55);
+        background: linear-gradient(180deg, rgba(222,13,111,0.20), rgba(222,13,111,0.06));
+        color: var(--text);
+        font-weight: 600;
+      }
+      .cta:hover { border-color: rgba(222, 13, 111, 0.8); }
+
+      /* Hero */
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 18px;
+        align-items: stretch;
+        margin-top: 18px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .card .inner { padding: 22px; }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 44px;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+
+      .subtitle {
+        margin: 0 0 18px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+        max-width: 62ch;
+      }
+
+      .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      .chip {
+        font-family: var(--mono);
+        font-size: 12px;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--subtle);
+        background: rgba(255,255,255,0.03);
+        color: rgba(255,255,255,0.80);
+      }
+      .chip .plus { color: rgba(255,255,255,0.55); margin: 0 4px; }
+
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+      .btn {
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.03);
+        color: var(--text);
+        padding: 12px 14px;
+        border-radius: 12px;
+        font-weight: 600;
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .btn:hover { background: rgba(255,255,255,0.05); }
+      .btn.primary {
+        border-color: rgba(222, 13, 111, 0.55);
+        background: linear-gradient(180deg, rgba(222,13,111,0.22), rgba(222,13,111,0.06));
+      }
+
+      .mini {
+        font-family: var(--mono);
+        color: rgba(255,255,255,0.72);
+        font-size: 12px;
+        margin-top: 14px;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      /* Terminal panel */
+      .terminal {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .term-top {
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(255,255,255,0.02);
+      }
+      .lights { display: flex; gap: 7px; }
+      .light { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+      .light.red { background: rgba(255, 97, 97, 0.7); }
+      .light.yellow { background: rgba(255, 214, 102, 0.7); }
+      .light.green { background: rgba(37, 211, 102, 0.75); }
+      .term-title { font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.65); }
+
+      .term-body {
+        padding: 14px;
+        font-family: var(--mono);
+        font-size: 13px;
+        line-height: 1.55;
+        color: rgba(255,255,255,0.82);
+        flex: 1;
+      }
+      .prompt { color: rgba(255,255,255,0.55); }
+      .cmd { color: rgba(255,255,255,0.92); }
+      .out { color: rgba(255,255,255,0.70); }
+      .accent { color: rgba(222, 13, 111, 0.92); }
+
+      /* Sections */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 14px;
+        margin-top: 14px;
+      }
+      .span-6 { grid-column: span 6; }
+      .span-7 { grid-column: span 7; }
+      .span-5 { grid-column: span 5; }
+      .span-12 { grid-column: span 12; }
+
+      .section-title {
+        font-size: 16px;
+        margin: 0 0 10px;
+        letter-spacing: -0.01em;
+      }
+      .muted { color: var(--muted); }
+
+      .list {
+        margin: 0;
+        padding-left: 18px;
+        color: rgba(255,255,255,0.80);
+      }
+      .list li { margin: 8px 0; }
+
+      .kpi {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .kpi .box {
+        flex: 1;
+        min-width: 160px;
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.03);
+      }
+      .kpi .num { font-family: var(--mono); font-size: 16px; }
+      .kpi .lbl { color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+      .proj {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .proj .item {
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.03);
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .proj .item strong { display: block; margin-bottom: 6px; }
+      .proj .meta { font-family: var(--mono); font-size: 12px; color: rgba(255,255,255,0.65); }
+
+      .footer {
+        margin-top: 18px;
+        padding: 18px 0 0;
+        border-top: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        color: rgba(255,255,255,0.60);
+        font-size: 13px;
+      }
+
+      .mono { font-family: var(--mono); }
+
+      /* Responsive */
+      @media (max-width: 920px) {
+        .hero { grid-template-columns: 1fr; }
+        h1 { font-size: 38px; }
+      }
+      @media (max-width: 720px) {
+        .span-6, .span-7, .span-5 { grid-column: span 12; }
+        .nav { border-radius: 18px; }
+        .navlinks { justify-content: flex-start; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <header class="nav">
+        <div class="brand">
+          <div class="dot"></div>
+          <div class="badge">bharathi.dev</div>
+        </div>
+        <nav class="navlinks">
+          <a class="pill" href="#work">Work</a>
+          <a class="pill" href="#skills">Skills</a>
+          <a class="pill" href="#projects">Projects</a>
+          <a class="pill" href="#contact">Contact</a>
+          <a class="cta" href="#contact">Let’s build →</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="card">
+          <div class="inner">
+            <div class="chips">
+              <span class="chip">Growth<span class="plus">+</span>PLG</span>
+              <span class="chip">Analytics<span class="plus">+</span>Tracking</span>
+              <span class="chip">Coder-in-training</span>
+              <span class="chip">Systems thinker</span>
+            </div>
+
+            <h1>
+              I ship growth systems<br />
+              <span style="color: rgba(255,255,255,0.72)">that feel like product.</span>
+            </h1>
+
+            <p class="subtitle">
+              I’m <strong>Bharathi</strong> (Vivekananda Bharathi Balasubramaniam) — a Growth & PLG lead
+              learning development so I can build end-to-end: from positioning → onboarding → tracking → experiments → revenue.
+              I like clean funnels, cleaner events, and teams that are excited about Monday mornings.
+            </p>
+
+            <div class="hero-actions">
+              <!-- TODO: replace these links -->
+              <a class="btn primary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <span>LinkedIn</span> <span class="mono">↗</span>
+              </a>
+              <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">
+                <span>GitHub</span> <span class="mono">↗</span>
+              </a>
+              <a class="btn" href="#contact">
+                <span>Contact</span> <span class="mono">↓</span>
+              </a>
+            </div>
+
+            <div class="mini">
+              <span>📍 India / EU timezones friendly</span>
+              <span>🧪 PLG • SEO • Paid • CRO</span>
+              <span>🧩 GA4 • GTM • Mixpanel • Looker</span>
+            </div>
+
+            <div class="kpi" style="margin-top: 16px;">
+              <div class="box">
+                <div class="num">8+ yrs</div>
+                <div class="lbl">Growth + marketplace scaling</div>
+              </div>
+              <div class="box">
+                <div class="num">Teams up to 14</div>
+                <div class="lbl">Marketers, designers, engineers</div>
+              </div>
+              <div class="box">
+                <div class="num">10×</div>
+                <div class="lbl">Traffic & leads scaled (BigFday)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card terminal">
+          <div class="term-top">
+            <div class="lights">
+              <div class="light red"></div>
+              <div class="light yellow"></div>
+              <div class="light green"></div>
+            </div>
+            <div class="term-title">/profile — coder × marketer</div>
+          </div>
+
+          <div class="term-body" id="terminal">
+            <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+            <div class="out">Bharathi — growth lead turning into a builder.</div>
+            <br />
+            <div><span class="prompt">$</span> <span class="cmd">focus</span></div>
+            <div class="out">PLG funnels • activation • pricing tests • analytics hygiene • compounding content</div>
+            <br />
+            <div><span class="prompt">$</span> <span class="cmd">stack</span></div>
+            <div class="out">GA4 / GTM / Mixpanel / Looker Studio • Webflow / WordPress • now learning: HTML/CSS/JS + Git</div>
+            <br />
+            <div><span class="prompt">$</span> <span class="cmd">values</span></div>
+            <div class="out">Ship fast → measure right → iterate weekly → build cultures people enjoy.</div>
+            <br />
+            <div><span class="prompt">$</span> <span class="cmd">status</span></div>
+            <div class="out">
+              Available for: <span class="accent">PLG + conversion consulting</span> / growth systems builds / analytics cleanup
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="work">
+        <div class="card span-7">
+          <div class="inner">
+            <h2 class="section-title">What I do</h2>
+            <p class="muted" style="margin: 0 0 12px;">
+              I sit between product, marketing, and data. I turn messy acquisition + onboarding into a measurable,
+              compounding system.
+            </p>
+            <ul class="list">
+              <li><strong>PLG + conversion:</strong> improve signup, onboarding, activation, and subscription conversion.</li>
+              <li><strong>Analytics you can trust:</strong> event design, GTM/GA4 debugging, Mixpanel funnels, dashboards.</li>
+              <li><strong>Compounding acquisition:</strong> SEO/content systems + landing page iteration + experiment cadence.</li>
+              <li><strong>Operator mindset:</strong> prioritize, ship, measure, and document so teams move faster.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card span-5">
+          <div class="inner">
+            <h2 class="section-title">Work snapshot</h2>
+            <div class="proj">
+              <div class="item">
+                <div>
+                  <strong>Mentalyc — PLG</strong>
+                  <div class="muted">Onboarding, pricing, activation → subscription conversion.</div>
+                </div>
+                <div class="meta">AI for therapists</div>
+              </div>
+              <div class="item">
+                <div>
+                  <strong>JoinMyTrip — Growth</strong>
+                  <div class="muted">Marketplace scaling + growth operations.</div>
+                </div>
+                <div class="meta">Travel tech</div>
+              </div>
+              <div class="item">
+                <div>
+                  <strong>BigFday — 1st marketing hire</strong>
+                  <div class="muted">Scaled traffic + leads by ~10×.</div>
+                </div>
+                <div class="meta">Early-stage</div>
+              </div>
+              <!-- TODO: add 1–2 more roles from your resume if you want -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="skills">
+        <div class="card span-6">
+          <div class="inner">
+            <h2 class="section-title">Skills (marketing)</h2>
+            <div class="chips">
+              <span class="chip">PLG funnels</span>
+              <span class="chip">CRO</span>
+              <span class="chip">Landing pages</span>
+              <span class="chip">Positioning</span>
+              <span class="chip">SEO systems</span>
+              <span class="chip">Experiment design</span>
+              <span class="chip">Lifecycle</span>
+              <span class="chip">Marketplace growth</span>
+            </div>
+            <p class="muted" style="margin-top: 12px;">
+              I’m strongest when I can own the full loop: hypothesis → build → measure → iterate.
+            </p>
+          </div>
+        </div>
+
+        <div class="card span-6">
+          <div class="inner">
+            <h2 class="section-title">Skills (builder)</h2>
+            <div class="chips">
+              <span class="chip">GA4</span>
+              <span class="chip">GTM</span>
+              <span class="chip">Mixpanel</span>
+              <span class="chip">Looker Studio</span>
+              <span class="chip">Spreadsheets</span>
+              <span class="chip">Webflow</span>
+              <span class="chip">HTML/CSS</span>
+              <span class="chip">JavaScript (learning)</span>
+              <span class="chip">Git/GitHub (learning)</span>
+            </div>
+            <p class="muted" style="margin-top: 12px;">
+              I’m learning dev to reduce handoff friction and ship faster prototypes end-to-end.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="projects">
+        <div class="card span-12">
+          <div class="inner">
+            <h2 class="section-title">Selected builds</h2>
+            <p class="muted" style="margin: 0 0 12px;">
+              A few things that represent the “coder × marketer” overlap.
+            </p>
+
+            <div class="proj">
+              <div class="item">
+                <div>
+                  <strong>Tracking + analytics cleanup</strong>
+                  <div class="muted">Event taxonomy, GTM triggers, GA4 sanity, Mixpanel funnels, Looker dashboards.</div>
+                </div>
+                <div class="meta">GA4 • GTM • Mixpanel</div>
+              </div>
+
+              <div class="item">
+                <div>
+                  <strong>Worksheets & landing page conversion system</strong>
+                  <div class="muted">Multi-step popups, intent capture, logging to Sheets, iterative CRO.</div>
+                </div>
+                <div class="meta">Webflow • HTML/CSS/JS</div>
+              </div>
+
+              <div class="item">
+                <div>
+                  <strong>Budget optimization / marketplace thinking</strong>
+                  <div class="muted">Incentive allocation frameworks across many markets (supply + demand levers).</div>
+                </div>
+                <div class="meta">Models • Experimentation</div>
+              </div>
+
+              <!-- TODO: add links to real artifacts -->
+              <div class="item">
+                <div>
+                  <strong>Open-source / GitHub experiments</strong>
+                  <div class="muted">Small projects as I learn dev: landing pages, scripts, automations.</div>
+                </div>
+                <div class="meta">GitHub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" id="contact">
+        <div class="card span-12">
+          <div class="inner">
+            <h2 class="section-title">Contact</h2>
+            <p class="muted" style="margin: 0 0 14px;">
+              If you want help with PLG conversion, analytics hygiene, or shipping a clean growth system—send a note.
+            </p>
+
+            <div class="hero-actions">
+              <!-- TODO: replace -->
+              <a class="btn primary" href="mailto:your.email@domain.com">
+                <span>Email me</span> <span class="mono">→</span>
+              </a>
+              <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                <span>DM on LinkedIn</span> <span class="mono">↗</span>
+              </a>
+              <a class="btn" href="https://cal.com/" target="_blank" rel="noreferrer">
+                <span>Book time</span> <span class="mono">↗</span>
+              </a>
+            </div>
+
+            <p class="muted" style="margin-top: 14px; font-family: var(--mono); font-size: 12px;">
+              Tip: Host this on GitHub Pages. Commit → push → enable Pages → done.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Bharathi</div>
+        <div class="mono">
+          built with <span style="color: var(--accent)">focus</span> + <span style="color: var(--ok)">shipping</span>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Small niceties: current year + subtle terminal typing effect
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      (function terminalBlink() {
+        const el = document.getElementById("terminal");
+        if (!el) return;
+        // optional: keep minimal; no heavy animation
+      })();
+    </script>
+  </body>
 </html>
